@@ -1,14 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { type ButtonHTMLAttributes } from "react";
+import type { ButtonHTMLAttributes } from "react";
 
-interface RomanticButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type RomanticButtonProps = Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  | "onAnimationStart"
+  | "onAnimationEnd"
+  | "onAnimationIteration"
+  | "onDragStart"
+  | "onDragEnd"
+  | "onDrag"
+> & {
   variant?: "primary" | "secondary" | "ghost";
   size?: "sm" | "md" | "lg";
   glow?: boolean;
   children: React.ReactNode;
-}
+};
 
 export default function RomanticButton({
   variant = "primary",
