@@ -25,7 +25,7 @@ export default function Home() {
       <ProposalSection onYes={() => {}} />
       <Footer />
       {/* Add src="/your-romantic-song.mp3" to enable music toggle */}
-      <MusicToggle />
+      <MusicToggle src="/your-romantic-song.mp3" />
     </div>
   );
 }
