@@ -8,7 +8,7 @@ import FunMessages from "./components/FunMessages";
 import MemoryGallery from "./components/MemoryGallery";
 import ProposalSection from "./components/ProposalSection";
 import Footer from "./components/Footer";
-import MusicToggle from "./components/MusicToggle";
+import BackgroundMusic from "./components/BackgroundMusic";
 
 export default function Home() {
   const scrollToStory = useCallback(() => {
@@ -17,6 +17,7 @@ export default function Home() {
 
   return (
     <div className="romantic-bg relative min-h-screen">
+      <BackgroundMusic src="/your-romantic-song.mp3" />
       <FloatingHearts />
       <HeroSection onTap={scrollToStory} />
       <StoryTimeline />
@@ -24,8 +25,6 @@ export default function Home() {
       {/* <MemoryGallery /> */}
       <ProposalSection onYes={() => {}} />
       <Footer />
-      {/* Add src="/your-romantic-song.mp3" to enable music toggle */}
-      <MusicToggle src="/your-romantic-song.mp3" />
     </div>
   );
 }
